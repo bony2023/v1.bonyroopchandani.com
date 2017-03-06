@@ -31,6 +31,10 @@ def projects():
 def resume():
     return app.send_static_file('resume.pdf')
 
+@app.route('/.well-known/acme-challenge/EEB_TH4OjncPvgDNaYH9oajzVCmSwPYtXrm4G8qmRgA')
+def well_known_main():
+    return 'EEB_TH4OjncPvgDNaYH9oajzVCmSwPYtXrm4G8qmRgA.WkABxUOfpy_vQ3uc2FmJJtWRJ8LCGB5wWyr4YRSXPVI'
+
 @app.route('/favicon.ico')
 def favicon():
     return app.send_static_file('favicon.ico')
