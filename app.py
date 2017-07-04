@@ -1,9 +1,11 @@
 from flask import Flask, render_template
+from flask_compress import Compress
 import datetime
 
 app = Flask(__name__)
 app.debug = False
 app.config.from_pyfile('flaskapp.cfg')
+Compress(app)
 currentYear = datetime.datetime.now().year
 
 @app.route('/sitemap.xml')
